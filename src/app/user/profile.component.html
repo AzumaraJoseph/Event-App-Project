@@ -1,0 +1,31 @@
+<div>
+    <h1>Edit Your Profile </h1>
+    <hr>
+    <div class="col-md-4">
+      <form [formGroup]="profileForm" (ngSubmit)="saveProfile(profileForm.value)" autocomplete="off" novalidate>
+        <!-- <div class="form-group" [ngClass]="{'error': profileForm.controls['firstName'].invalid && profileForm.controls['firstName'].touched}">
+            <label for="firstName">First Name:</label>
+            <input formControlName="firstName" id="firstName" type="text" class="form-control" placeholder="First Name..." />
+        </div> -->
+        
+        <div class="form-group" [ngClass]="{'error': !validateFirstName() }">
+          <label for="firstName">First Name:</label>
+          <em *ngIf="profileForm && profileForm.controls['firstName'] && !validateFirstName() && profileForm.controls['firstName'].errors && profileForm.controls['firstName'].errors['required']">Required</em>          
+          <em *ngIf="profileForm && profileForm.controls['firstName'] && !validateFirstName() && profileForm.controls['firstName'].errors && profileForm.controls['firstName'].errors['pattern']">Must start with a letter</em>          
+          <input formControlName="firstName" id="firstName" type="text" class="form-control" placeholder="First Name..." />
+        </div>
+        
+        <div class="form-group" [ngClass]="{'error': !validateLastName()}">
+          <label for="lastName">Last Name:</label>
+          <em *ngIf="profileForm && profileForm.controls['lastName'] && !validateLastName() && profileForm.controls['lastName'].errors && profileForm.controls['lastName'].errors['required']">Required</em>          
+          <em *ngIf="profileForm && profileForm.controls['lastName'] && !validateLastName() && profileForm.controls['lastName'].errors && profileForm.controls['lastName'].errors['pattern']">Must start with a letter</em>
+          <input formControlName="lastName" id="lastName" type="text" class="form-control" placeholder="Last Name..." />
+        </div>
+  
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="button" (click)="cancel()" class="btn btn-default">Cancel</button>
+        <button type="button" style="float: right;" (click)="logout()" class="btn btn-warning">Log Out</button>  
+
+
+        
+
