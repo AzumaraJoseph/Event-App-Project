@@ -12,8 +12,7 @@ import { ISession, restrictedWords } from "../shared";
       .error ::-moz-placeholder { color: #999; }
       .error :-moz-placeholder { color: #999; }
       .error :-ms-input-placeholder { color: #999; }
-    `]
-    
+    `] 
 })
 export class CreateSessionComponent implements OnInit {
     @Output() saveNewSession: EventEmitter<ISession> = new EventEmitter()

@@ -6,7 +6,6 @@ import { SessionListComponent } from "./session-list.component";
 import { DurationPipe } from "../shared";
 import { By } from "@angular/platform-browser";
 
-
 describe('sessionListComponent', () => {
     let mockAuthService, 
     mockVoterService, 
