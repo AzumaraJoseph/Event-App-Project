@@ -18,4 +18,3 @@ export class collapsibeWellComponent {
         this.visible = !this.visible;
     }
 }
-
