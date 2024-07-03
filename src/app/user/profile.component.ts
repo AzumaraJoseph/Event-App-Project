@@ -9,7 +9,6 @@ import { TOASTR_TOKEN, Toastr } from "../common/event-toastr.service";
     styles: [`
       em { float: right; padding-left: 1rem; color: #E05c65; }
       .error input { background-color: #E3C3C5; }
-      // .error input-placeholder { color: #999; }
       .error ::-webkit-input-placeholder { color: #999; }
       .error ::-moz-placeholder { color: #999; }
       .error :-moz-placeholder { color: #999; }
