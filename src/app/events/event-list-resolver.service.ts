@@ -13,7 +13,6 @@ export class EventListResolver implements Resolve<any> {
     resolve() {
         return this.eventService.getEvents();  //.subscribe(); // resolver subscribes to itself
 
-        //return this.eventService.getEvents().pipe(map(events => events))
     }
 }
 

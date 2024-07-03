@@ -11,7 +11,6 @@ describe('voterService', () => {
         voterservice = new voterService(mockHttp);
     })
 
-    
     describe('deleteVoter', () => {
         it('should delete voter from the list of voters', () => {
             const session = {id: 3, voters: ['john', 'joe']};

@@ -14,4 +14,3 @@ export class DurationPipe implements PipeTransform {
         }
     }
 }
-

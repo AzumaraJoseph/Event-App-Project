@@ -7,6 +7,7 @@ import { Observable, catchError, of } from "rxjs";
     providedIn: 'root'
 })
 export class voterService {
+    
     constructor (private http: HttpClient) {}
 
     deleteVoter(eventId: number, session: ISession, voterName: string) {
