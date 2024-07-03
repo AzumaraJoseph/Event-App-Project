@@ -19,5 +19,3 @@ export class EventAppComponent {
     this.auth.checkAuthenticationStatus();
   }
 }
-
-
